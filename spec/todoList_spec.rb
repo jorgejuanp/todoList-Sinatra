@@ -23,4 +23,10 @@ describe Task do
       expect(@task.mark_incomplete!).to eq(false)
     end
   end
+
+  describe "#update_content!" do
+    it "changes the content of the task to the new value (substitutes the old string by the new given)" do
+      expect(@task.update_content!("This is new content")).to eq("This is new content")
+    end
+  end
 end

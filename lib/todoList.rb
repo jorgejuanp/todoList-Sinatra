@@ -6,6 +6,7 @@ class Task
     def initialize(content)
         @content = content
         @completed = false
+        @created_at = Time.new
         @id = @@current_id
         @@current_id += 1
     end
@@ -20,5 +21,9 @@ class Task
 
     def mark_incomplete!
       @completed = false
+    end
+
+    def update_content!(new_content)
+      @content = new_content
     end
 end
