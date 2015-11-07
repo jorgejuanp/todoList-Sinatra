@@ -7,12 +7,20 @@ describe Task do
   end
 
   describe "#complete?" do
-    it "returns false if an instance of a task is NOT done" do
+    it "returns false if a task is NOT done (@completed == false)" do
       expect(@task.complete?).to eq(false)
     end
+  end
 
-    # it "returns true if a task is done" do
-    #   expect(@task.complete?(1)).to eq(true)
-    # end
+  describe "#complete!" do
+    it "marks task as completed (turns @completed to true)" do
+      expect(@task.complete!).to eq(true)
+    end
+  end
+
+  describe "#make_incomplete!" do
+    it "marks task as incompleted (turns @completed to false)" do
+      expect(@task.mark_incomplete!).to eq(false)
+    end
   end
 end

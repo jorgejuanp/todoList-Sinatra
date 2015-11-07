@@ -11,10 +11,14 @@ class Task
     end
 
     def complete?
-      if @completed == false
-        return false
-      else
-        return true
-      end
+      @completed
+    end
+
+    def complete!
+      @completed = true
+    end
+
+    def mark_incomplete!
+      @completed = false
     end
 end
