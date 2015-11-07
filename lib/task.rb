@@ -1,4 +1,3 @@
-
 class Task
     attr_reader :content, :id
     @@current_id = 1
@@ -25,7 +24,7 @@ class Task
     end
 
     def update_content!(new_content)
-      @updated_at = Time.new
+      # @updated_at = Time.new
       @content = new_content
     end
 end
